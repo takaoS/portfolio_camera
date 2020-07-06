@@ -29,4 +29,9 @@ class CameraController extends Controller
 
       return redirect('/');
     }
+
+    public function index_video()
+    {
+      return view('capture_video_image');
+    }
 }

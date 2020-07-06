@@ -13,3 +13,6 @@
 
 Route::get('/', 'CameraController@index');
 Route::post('/', 'CameraController@store');
+
+Route::get('/video', 'CameraController@index_video');
+Route::post('/video', 'CameraController@store');
