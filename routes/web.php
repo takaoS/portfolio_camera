@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'TestController@index');
-Route::post('/', 'TestController@store');
+Route::get('/', 'CameraController@index');
+Route::post('/', 'CameraController@store');
