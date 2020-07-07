@@ -1,8 +1,10 @@
 var input_image = document.getElementById('input_image');
 var display = document.getElementById('display');
 var ctx = display.getContext('2d');
-var canvas_width = 250;
-var canvas_height = 250;
+var canvas_width = 500;
+var canvas_height = 500;
+var canvas_style_width = 250;
+var canvas_style_height = 250;
 
 display.addEventListener('click', () => {
 		input_image.click();
@@ -32,10 +34,12 @@ input_image.addEventListener('change', () => {
 						var clip_x = (image_width - clip_width) / 2;
             var clip_y = (image_height - clip_height) / 2;
 
-            ctx.clearRect(0, 0, canvas_width, canvas_height);
+            // canvasに描画
+            ctx.clearRect(0, 0, canvas_style_width, canvas_height);
             ctx.drawImage(image, clip_x, clip_y, clip_width, clip_height, 0, 0, canvas_width, canvas_height);
 
-            document.getElementById('upload_image').value = display.toDataURL('image/*');
+            // canvasに描画した画像をjpegとしてformに埋め込み
+            document.getElementById('upload_image').value = display.toDataURL('image/jpeg');
         }
 				image.src = reader.result;
         image.onerror = function (){ console.log(image.error); }

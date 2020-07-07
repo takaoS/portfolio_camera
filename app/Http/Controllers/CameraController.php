@@ -18,12 +18,12 @@ class CameraController extends Controller
       $canvas = $request->input('upload_image');
 
       if (isset($canvas)) {
-        $canvas = preg_replace('<data:image/png;base64,>', '', $canvas);
+        $canvas = preg_replace('<data:image/jpeg;base64,>', '', $canvas);
         $canvas = base64_decode($canvas);
-        Storage::disk('public')->put('sample.png', $canvas);
+        Storage::disk('public')->put('sample.jpeg', $canvas);
 
         $image_path = new ImagePath;
-        $image_path->path = asset('storage/sample.png');
+        $image_path->path = asset('storage/sample.jpeg');
         $image_path->save();
       }
 

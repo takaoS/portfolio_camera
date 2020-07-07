@@ -9,3 +9,4 @@
 - onloadイベントリスナの設定タイミング(https://please-sleep.cou929.nu/onload-handler-setting-timing-and-async-request-of-image-element.html)
 - トリム、縮小してcanvasに表示する方法(http://devlabo.blogspot.com/2016/02/fit-image.html)
 - 劣化を防ぐため、元サイズは変えずに表示だけ縮小する方法(https://teratail.com/questions/67020)
+- 画像の拡張子ごとの品質について(https://webtan.impress.co.jp/e/2018/04/17/28977)
