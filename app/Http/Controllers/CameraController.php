@@ -27,7 +27,7 @@ class CameraController extends Controller
         $image_path->save();
       }
 
-      return redirect('/');
+      return redirect(/*secure_*/url('/'));
     }
 
     public function index_video()

@@ -20,6 +20,6 @@
     <input id="submit_image" type="submit" name="submit" value="送信">
   </form>
   <canvas id="captured_image"></canvas>
-	<script src="{{ asset('js/script2.js') }}"></script>
+	<script src="{{ /*secure_*/asset('js/script2.js') }}"></script>
 </body>
 </html>

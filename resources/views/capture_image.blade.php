@@ -18,6 +18,6 @@
     <input id="submit_image" type="submit" name="submit_image" value="送信">
   </form>
   <canvas id="display" width="250" height="250" style="background-color: #000"></canvas>
-  <script src="{{ asset('js/script.js') }}"></script>
+  <script src="{{ /*secure_*/asset('js/script.js') }}"></script>
 </body>
 </html>
