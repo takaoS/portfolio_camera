@@ -1,13 +1,13 @@
 var input_image = document.getElementById('input_image');
 var display = document.getElementById('display');
 var ctx = display.getContext('2d');
-var canvas_width = 500;
-var canvas_height = 500;
+var canvas_width = 1500;
+var canvas_height = 1500;
 var canvas_style_width = 250;
 var canvas_style_height = 250;
 
 display.addEventListener('click', () => {
-		input_image.click();
+    input_image.click();
 }, false)
 
 input_image.addEventListener('change', () => {
@@ -25,13 +25,13 @@ input_image.addEventListener('change', () => {
             if ( (image_width/image_height) > (canvas_width/canvas_height) ) {
                 scale = canvas_height / image_height;
             } else {
-								scale = canvas_width / image_width;
+                scale = canvas_width / image_width;
             }
 
             // 元画像の切り出し領域の計算
             var clip_width = canvas_width / scale;
             var clip_height = canvas_height / scale;
-						var clip_x = (image_width - clip_width) / 2;
+            var clip_x = (image_width - clip_width) / 2;
             var clip_y = (image_height - clip_height) / 2;
 
             // canvasに描画
@@ -41,7 +41,7 @@ input_image.addEventListener('change', () => {
             // canvasに描画した画像をjpegとしてformに埋め込み
             document.getElementById('upload_image').value = display.toDataURL('image/jpeg');
         }
-				image.src = reader.result;
+        image.src = reader.result;
         image.onerror = function (){ console.log(image.error); }
     }
     reader.readAsDataURL(file);
