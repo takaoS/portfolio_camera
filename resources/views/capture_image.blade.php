@@ -17,7 +17,10 @@
     <input id="upload_image" type="hidden" name="upload_image" value="">
     <input id="submit_image" type="submit" name="submit_image" value="送信">
   </form>
-  <canvas id="display" width="500" height="500" style="background-color: #000; width:250px; height:250px;"></canvas>
+  <canvas id="display" width="1500" height="1500" style="background-color: #000; width:250px; height:250px;"></canvas>
   <script src="{{ /*secure_*/asset('js/script.js') }}"></script>
+  @if (isset($image_path))
+  <img src="{{ $image_path->path }}" style="width:250px; height:250px;">
+  @endif
 </body>
 </html>
