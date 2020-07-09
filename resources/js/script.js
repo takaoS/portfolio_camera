@@ -35,7 +35,7 @@ input_image.addEventListener('change', () => {
             var clip_y = (image_height - clip_height) / 2;
 
             // canvasに描画
-            ctx.clearRect(0, 0, canvas_style_width, canvas_height);
+            ctx.clearRect(0, 0, canvas_style_width, canvas_style_height);
             ctx.drawImage(image, clip_x, clip_y, clip_width, clip_height, 0, 0, canvas_width, canvas_height);
 
             // canvasに描画した画像をjpegとしてformに埋め込み
